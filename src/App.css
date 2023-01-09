@@ -1,38 +1,57 @@
 .App {
   text-align: center;
+  background: linear-gradient(315deg, #1F0042 0%, #840490 110%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.containerMain > .button {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: baseline;
+  justify-self: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 1190px) {
+  .containerMain > .button {
+    grid-column: 2;
+    align-self: baseline;
+    justify-self: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul.containerBreadcrumb {
+  grid-column: 2;
+  align-self: end;
+  padding: 10px 16px;
+  list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+ul.containerBreadcrumb li{
+  display: inline;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+ul.containerBreadcrumb li+li:before {
+  padding: 8px;
+  color: #ffffff23;
+  content: "/\00a0";
+}
+
+ul.containerBreadcrumb li a {
+  color: #ffffff23;
+  text-decoration: none;
+}
+
+.containerMain > .containerText {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+}
+
+@media (max-width: 1190px) {
+  .containerMain > .containerText {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: end;
+    justify-self: center;
   }
 }
